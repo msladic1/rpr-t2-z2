@@ -36,7 +36,18 @@ public class Interval {
     }
 
     public boolean isIn(double tacka) {
-        if(tacka >= t1 && tacka <= t2) return true;
+        if(aPripada == true && bPripada == true) {
+            if (tacka >= t1 && tacka <= t2) return true;
+        }
+        else if(aPripada == true && bPripada == false){
+            if (tacka >= t1 && tacka < t2) return true;
+        }
+        else if(aPripada == false && bPripada == true){
+            if (tacka > t1 && tacka <= t2) return true;
+        }
+        else if(aPripada == false && bPripada == false){
+            if (tacka > t1 && tacka < t2) return true;
+        }
         return  false;
     }
 
