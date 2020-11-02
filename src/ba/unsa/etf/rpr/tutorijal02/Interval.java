@@ -18,7 +18,8 @@ public class Interval {
         return false;
     }
 
-    /*public boolean isIn(double tacka) {
-        if(tacka >= t1 && tacka)
-    }*/
+    public boolean isIn(double tacka) {
+        if(tacka >= t1 && tacka <= t2) return true;
+        return  false;
+    }
 }
