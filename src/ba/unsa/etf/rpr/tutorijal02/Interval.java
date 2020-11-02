@@ -65,6 +65,11 @@ public class Interval {
         return null;
     }
 
-
+    @Override
+    public boolean equals(Object o){
+        Interval inter = (Interval) o;
+        if(inter.getT1() == t1 && inter.getT2() == t2 && inter.isaPripada() == aPripada && inter.isbPripada() == bPripada) return true;
+        return false;
+    }
 
 }
