@@ -58,6 +58,7 @@ public class Interval {
 
     @Override
     public String toString() {
+        if(this.isNull()) return "()";
         if(aPripada == true && bPripada == true) return "[" + t1 + "," + t2 +"]";
         if(aPripada == true && bPripada == false) return "[" + t1 + "," + t2 +")";
         if(aPripada == false && bPripada == true) return "(" + t1 + "," + t2 +"]";
