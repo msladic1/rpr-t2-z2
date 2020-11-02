@@ -48,6 +48,14 @@ public class Interval {
         return vratiti;
     }
 
+    public static Interval intersect(Interval inter1, Interval inter2){
+        Interval vratiti = new Interval();
+        if(inter1.getT1() > inter2.getT1() && inter1.getT2()>inter2.getT2()) {
+            vratiti = new Interval(inter1.getT1(), inter2.getT2(), inter1.isaPripada(), inter2.isbPripada());
+        }
+        return vratiti;
+    }
+
     @Override
     public String toString() {
         if(aPripada == true && bPripada == true) return "[" + t1 + "," + t2 +"]";
