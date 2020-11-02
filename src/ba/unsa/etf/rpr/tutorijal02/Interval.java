@@ -12,4 +12,13 @@ public class Interval {
     public Interval() {
         t1 = 0; t2 = 0; aPripada = false; bPripada = true;
     }
+
+    public boolean isNull() {
+        if(t1 == 0 && t2 == 0) return true;
+        return false;
+    }
+
+    /*public boolean isIn(double tacka) {
+        if(tacka >= t1 && tacka)
+    }*/
 }
